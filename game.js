@@ -78,7 +78,7 @@ const bootRuntime = async () => {
 	const { dotnet } = await import("./_framework/dotnet.js");
 	return dotnet
 		.withModuleConfig({ canvas })
-		.withEnvironmentVariable("MONO_SLEEP_ABORT_LIMIT", "99999")
+		.withEnvironmentVariable("MONO_SLEEP_ABORT_LIMIT", "9999999")
 		.withRuntimeOptions([
 			`--jiterpreter-minimum-trace-hit-count=${500}`,
 			`--jiterpreter-trace-monitoring-period=${100}`,
